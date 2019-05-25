@@ -1,0 +1,43 @@
+{% extends 'layout.html' %} {% block body %}
+<h3>First name</h3>
+{% if user_data.first_name %}
+<p>{{ user_data.first_name }}</p>
+<br />
+{% endif %}
+<h3>Last name</h3>
+{% if user_data.last_name %}
+<p>{{ user_data.last_name }}</p>
+{% endif %}
+<br />
+<h3>Date of birth</h3>
+{% if user_data.date_of_birth %}
+<p>{{ user_data.date_of_birth }}</p>
+{% endif %}
+<br />
+<h3>Email</h3>
+{% if user_data.email %}
+<p>{{ user_data.email }}</p>
+{% endif %}
+<br />
+<h3>Bio</h3>
+{% if user_data.bio %}
+<p>{{ user_data.bio | safe }}</p>
+{% endif %}
+<br />
+<h3>Avatar</h3>
+{% if user_data.avatar %}
+<div id="img-container">
+	<img src="{{ user_data.avatar.url }}" id="fit-image" alt="profile_picture" />
+</div>
+
+{% endif %}
+<br />
+<br />
+<span>
+	<a href="{% url 'user_profile:edit' %}" class="button">Edit</a>
+	<a href="{% url 'user_profile:change_password' %}" class="button"
+		>Change password</a
+    >
+	<a href="{% url 'image_editor:edit' %}" class="button">Image editor</a>
+</span>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block head %}    
+    <script type="text/javascript" src="{% static "js/validate_form.js" %}"></script>
+    {% load bootstrap4 %}       {# import bootstrap4/bootstrap3 #}
+    {% bootstrap_css %}         {# Embed Bootstrap CSS #}
+    {% bootstrap_javascript jquery='full' %}  {# Embed Bootstrap JS+jQuery #} 
+    {{ form.media }} 
+{% endblock %}
+
+{% block body %}
+    <form action="#" method="POST" name='edit_profile_form' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value='Save' >
+    </form>
+{% endblock %}

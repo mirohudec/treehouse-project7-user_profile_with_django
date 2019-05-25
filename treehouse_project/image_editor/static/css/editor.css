@@ -1,0 +1,86 @@
+body {
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0;
+	margin: 0;
+}
+#container {
+	margin: 0 auto;
+	height: 100vh;
+}
+
+#buttons {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	background-color: black;
+	height: 7vh;
+	color: white;
+	z-index: 3;
+}
+canvas {
+	z-index: 1;
+}
+
+a {
+	padding-right: 20px;
+}
+
+.upload > input {
+	display: none;
+}
+
+.upload img {
+	width: 80px;
+	cursor: pointer;
+}
+
+#resize-ne,
+#resize-nw,
+#resize-se,
+#resize-sw {
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: rgba(222, 60, 80, 0.9);
+	z-index: 999;
+}
+
+#resize-nw {
+	top: -5px;
+	left: -5px;
+	cursor: nw-resize;
+}
+
+#resize-sw {
+	bottom: -5px;
+	left: -5px;
+	cursor: sw-resize;
+}
+
+#resize-ne {
+	top: -5px;
+	right: -5px;
+	cursor: ne-resize;
+}
+
+#resize-se {
+	bottom: -5px;
+	right: -5px;
+	cursor: se-resize;
+}
+
+.canvas-container {
+	background-image: rgba(0, 0, 0, 0.753);
+}
+
+#resize-container {
+	position: fixed;
+	display: inline-block;
+	cursor: move;
+	margin: 0 auto;
+	border: 2px dashed rgba(222, 60, 80, 0.9);
+	z-index: 10;
+}

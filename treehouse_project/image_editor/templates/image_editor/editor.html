@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="{% static "css/editor.css" %}">
+        <script type="text/javascript" src="{% static "js/editor.js" %}"></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="container" ondragover="event.preventDefault()">
+            <div id="overlay">
+                    <div id="resize-container">
+                            <span id='resize-ne' draggable="true"></span>
+                            <span id='resize-nw' draggable="true"></span>
+                            <span id='resize-se' draggable="true"></span>
+                            <span id='resize-sw' draggable="true"></span>
+                        </div>
+                <canvas id="canvas" width="500" height="500"> 
+                       
+                </canvas>
+            </div>
+			<div id="buttons">
+                <div class="upload">
+                    <label for="input">
+                        <a id="add">Add</a>
+                    </label>
+                        
+                    <input id="input" type="file"/>
+                </div>
+                <a id="rotate">Rotate</a>
+                <a id="crop_image">Crop Image</a>
+                <a id="flip_H" >Flip Horizontally</a>
+                <a id="flip_V" >Flip Vertically</a>
+                <form action="#" method="POST" name="image_edit">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Save">
+                </form>
+				<!-- <img src="{% static 'images/add.svg' %}" alt="" />
+				<img src="{% static 'images/chevron.svg' %}" alt="" />
+				<img src="{% static 'images/star.svg' %}" alt="" />
+				<img src="{% static 'images/search.svg' %}" alt="" />
+				<img src="{% static 'images/arrow-right.svg' %}" alt="" /> -->
+			</div>
+		</div>
+	</body>
+</html>

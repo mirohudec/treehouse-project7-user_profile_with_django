@@ -1,0 +1,14 @@
+input:invalid {
+	background-color: rgb(247, 140, 140);
+}
+
+#img-container {
+	width: 150px; /*any size*/
+	height: 150px; /*any size*/
+}
+
+#fit-image {
+	width: 100%;
+	height: 100%;
+	object-fit: contain; /*magic*/
+}
