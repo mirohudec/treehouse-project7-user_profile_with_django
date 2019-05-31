@@ -2,8 +2,8 @@
 <h3>First name</h3>
 {% if user_data.first_name %}
 <p>{{ user_data.first_name }}</p>
-<br />
 {% endif %}
+<br />
 <h3>Last name</h3>
 {% if user_data.last_name %}
 <p>{{ user_data.last_name }}</p>
@@ -17,6 +17,21 @@
 <h3>Email</h3>
 {% if user_data.email %}
 <p>{{ user_data.email }}</p>
+{% endif %}
+<br />
+<h3>State</h3>
+{% if user_data.state %}
+<p>{{ user_data.state }}</p>
+{% endif %}
+<br />
+<h3>City</h3>
+{% if user_data.city %}
+<p>{{ user_data.city }}</p>
+{% endif %}
+<br />
+<h3>Hobby</h3>
+{% if user_data.hobby %}
+<p>{{ user_data.hobby }}</p>
 {% endif %}
 <br />
 <h3>Bio</h3>
@@ -37,7 +52,7 @@
 	<a href="{% url 'user_profile:edit' %}" class="button">Edit</a>
 	<a href="{% url 'user_profile:change_password' %}" class="button"
 		>Change password</a
-    >
+	>
 	<a href="{% url 'image_editor:edit' %}" class="button">Image editor</a>
 </span>
 {% endblock %}

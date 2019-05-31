@@ -1,0 +1,41 @@
+#meter-value {
+	display: inline-block;
+	border-radius: 10px;
+    height: 2rem;
+    max-width: 20rem;
+    position: relative;
+    width: 1%;
+}
+
+#strength-meter {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+	margin: auto;
+}
+
+#container {
+	position: relative;
+	overflow: hidden;
+    max-width: 400px;
+    min-hei: 60px;
+}
+
+.color_super_weak {
+    background-color: rgb(158, 10, 10)
+}
+
+.color_weak{
+    background-color: rgb(221, 32, 32)
+}
+
+.color_medium {
+    background-color: rgb(212, 209, 16)
+}
+
+.color_good {
+    background-color: rgb(77, 145, 13)
+}
+
+.color_strong {
+    background-color: rgb(67, 241, 23)
+}

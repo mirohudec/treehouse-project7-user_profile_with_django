@@ -31,6 +31,9 @@ class UserProfile(models.Model):
     email = models.EmailField(blank=True)
     date_of_birth = models.DateField(null=True, blank=True)
     bio = models.TextField(validators=[bio_length_validator], blank=True)
+    hobby = models.CharField(max_length=255, blank=True)
+    city = models.CharField(max_length=255, blank=True)
+    state = models.CharField(max_length=255, blank=True)
     avatar = models.ImageField(upload_to='images/', blank=True)
 
     def __str__(self):

@@ -48,11 +48,11 @@
                         {% if user.is_authenticated %}
                         <li><a href="{% url 'user_profile:home' %}">profile</a></li>
                         {% endif %}
-                        <li><a href="#">here?</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="circle--fluid--cell circle--fluid--secondary">
+                {% block profile %} {% endblock %}
                 <nav>
                     <ul class="circle--inline">
                         {% if not user.is_authenticated %}

@@ -17,14 +17,35 @@ cannot contain the username or parts of the user’s full name, such as his firs
 
 ## Comments
 
+### Created User Profile
+
+user: miro2
+password: Qwertyuiop1346-
+
 ### Image Editor
+
+### Image Editor Doesn't work in Firefox
 
 #### From Extra Credit:
 
-##### Image Editor Doesn't work in Firefox
-
 Add an online image editor to the avatar. Include the basic functionality: rotate, crop and flip. PNG mockup supplied.
 
-Don't know if you need to create your own simple editor or get a javascript library or a python django one and implement it.
+#### Details
 
-Decided to create realy simple one myself. I am using Drag and drop API from broswer for the crop functionality. it works in Windows 10 in Chrome, Edge and Opera. Firefox doesn't work because they return different offset in drag event and i dont want to rewrite the whole drag system to mouse movement (It already took at least 2 days for me to implenet this basic editor)
+Created a simple image editor app. I am using Drag and drop API from the browser for the crop function. it works on Windows 10 in Chrome, Edge and Opera. Firefox doesn't work because they return different offset in drag event and decided not to rewrite it for one browser.
+
+Editor changes all pictures to fit into 500 x 500 pixel area and retains dimensions of the image
+
+#### Bugs
+
+- can't rotate and flip after crop (the image will become original uncropped image)
+- firefox drag and drop API values in drag event are completely different
+- can crop outside of image
+
+#### From Extra Credit:
+
+A password strength “meter” is displayed when validating passwords.
+
+#### Details
+
+Created a new widget that returns password strength check as bar. It checks the length of the password and applies css based on it.

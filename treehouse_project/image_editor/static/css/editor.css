@@ -4,11 +4,17 @@ body {
 	margin: 0;
 }
 #container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0 auto;
 	height: 100vh;
 }
 
 #buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: fixed;
 	left: 0;
 	bottom: 0;
@@ -19,7 +25,13 @@ body {
 	color: white;
 	z-index: 3;
 }
+
+#buttons img {
+	margin-left: 1rem;
+}
+
 canvas {
+	display: None;
 	z-index: 1;
 }
 
@@ -77,10 +89,35 @@ a {
 }
 
 #resize-container {
+	display: none;
 	position: fixed;
-	display: inline-block;
 	cursor: move;
 	margin: 0 auto;
 	border: 2px dashed rgba(222, 60, 80, 0.9);
 	z-index: 10;
+}
+
+.svg-img {
+	filter: invert(0.9);
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+#flip_H {
+	transform: rotate(90deg);
+}
+
+.add_text {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.9);
+	text-align: center;
+}
+
+#remove_image {
+	transform: scale(0.9);
+}
+
+#add {
+	width: 4rem;
+	height: 4rem;
 }

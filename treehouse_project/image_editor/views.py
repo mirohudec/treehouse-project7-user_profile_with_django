@@ -11,6 +11,8 @@ from django.shortcuts import redirect
 
 
 def image_edit(request):
+    if not request.user.is_authenticated:
+        return redirect('accounts:sign_in')
     form = ImageUploadForm()
     if request.method == 'POST':
         form = ImageUploadForm(request.POST)
